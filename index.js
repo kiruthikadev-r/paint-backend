@@ -79,3 +79,7 @@ app.post('/login', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+app.post('/',async(req,res)=>{
+  res.send("vanakkam from JK")
+})
