@@ -31,15 +31,12 @@ app.use(bodyParser.json());
 // Signup endpoint
 app.post('/signup', async (req, res) => {
   try {
-    const { name, email, password, confirmPassword } = req.body;
+    const { name, email, password } = req.body;
+    console.log(name,email,password);
     
     // Check if required fields are provided
-    if (!name || !email || !password || !confirmPassword) {
+    if (!name || !email || !password) {
       return res.status(400).json({ error: 'All fields are required' });
-    }
-
-    if (password !== confirmPassword) {
-      return res.status(400).json({ error: 'Passwords do not match' });
     }
 
     const existingUser = await User.findOne({ email });
