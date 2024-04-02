@@ -8,7 +8,7 @@ const cors = require('cors');
 
 const app = express();
 const corsOptions = {
-    origin: 'https://jeevankumar.ccbp.tech',
+    origin: 'http://localhost:3000',
     methods: ['GET', 'POST'], 
   };
   
