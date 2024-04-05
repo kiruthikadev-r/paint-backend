@@ -8,7 +8,7 @@ const cors = require('cors');
 
 const app = express();
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://education-four-o.vercel.app',
     methods: ['GET', 'POST'], 
   };
   
